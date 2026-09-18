@@ -10,7 +10,7 @@ class tarefaController{
     }
 
     public function index(){
-        $tarefa = $this->tarefaModel->listar(); 
+        $tarefas = $this->tarefaModel->listar(); 
         include __DIR__ . '/../views/listar.php'; 
     }
 
@@ -18,7 +18,7 @@ class tarefaController{
         if(isset($_POST['descricao']) && !empty(trim($_POST['descricao']))){
             $this->tarefaModel->criar($_POST['descricao']);
         }
-        header("Location: index.php");
+        header("location: index.php");
     }
 
     public function excluir(){
