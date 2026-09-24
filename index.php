@@ -12,6 +12,9 @@
         case 'excluir':
             $controller->excluir();
             break;
+        case 'editar':
+            $controller->editar();
+            break;
         default:
             $controller->index(); 
     }
